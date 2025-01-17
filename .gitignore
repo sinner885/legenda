@@ -2,11 +2,11 @@
 *.pot
 *.pyc
 __pycache__/
-local_settings.py
+local_.py
 
 .env
 db.sqlite3
 .venv_l
 
 media
-static
+
