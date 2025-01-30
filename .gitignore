@@ -9,4 +9,8 @@ db.sqlite3
 .venv_l
 
 media
-
+manage.py
+manage.py
+config/asgi.py
+config/production.py
+config/wsgi.py
