@@ -19,18 +19,18 @@ INSTALLED_APPS = [
     "django.contrib.messages",
     "django.contrib.staticfiles",
     # мои приложения
-    'blog.apps.BlogConfig',
+    "blog.apps.BlogConfig",
     "users.apps.UsersConfig",
+    "pages.apps.PagesConfig",
     # сторонние пакеты
     "allauth",
     "allauth.account",
     "allauth.socialaccount",
-
     "crispy_forms",
     "crispy_tailwind",
-    'tailwind',
-    'theme',
-    'django_browser_reload',
+    "tailwind",
+    "theme",
+    "django_browser_reload",
 ]
 
 MIDDLEWARE = [
@@ -98,7 +98,8 @@ ACCOUNT_UNIQUE_EMAIL = True
 CRISPY_ALLOWED_TEMPLATE_PACKS = "tailwind"
 CRISPY_TEMPLATE_PACK = "tailwind"
 
-TAILWIND_APP_NAME = 'theme'
+TAILWIND_APP_NAME = "theme"
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
+

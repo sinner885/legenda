@@ -1,0 +1,169 @@
+{% extends '_base.html' %} {% load socialaccount %} {% block content %}
+<main class="container mx-auto mt-8">
+  <div class="w-full md:w-3/5 mx-auto p-8">
+    <p>open <strong>multiple</strong></p>
+    <div class="shadow-md">
+      <div class="tab w-full overflow-hidden border-t">
+        <input
+          class="absolute opacity-0"
+          id="tab-multi-one"
+          type="checkbox"
+          name="tabs"
+        />
+        <label
+          class="block p-5 leading-normal cursor-pointer"
+          for="tab-multi-one"
+          >label one</label
+        >
+        <div
+          class="tab-content overflow-hidden border-l-2 bg-gray-100 border-indigo-500 leading-normal"
+        >
+          <p class="p-5">
+            lorem ipsum dolor sit amet, consectetur adipisicing elit. tenetur,
+            architecto, explicabo perferendis nostrum, maxime impedit atque odit
+            sunt pariatur illo obcaecati soluta molestias iure facere dolorum
+            adipisci eum? saepe, itaque.
+          </p>
+        </div>
+      </div>
+      <div class="tab w-full overflow-hidden border-t">
+        <input
+          class="absolute opacity-0"
+          id="tab-multi-two"
+          type="checkbox"
+          name="tabs"
+        />
+        <label
+          class="block p-5 leading-normal cursor-pointer"
+          for="tab-multi-two"
+          >label two</label
+        >
+        <div
+          class="tab-content overflow-hidden border-l-2 bg-gray-100 border-indigo-500 leading-normal"
+        >
+          <p class="p-5">
+            lorem ipsum dolor sit amet, consectetur adipisicing elit. tenetur,
+            architecto, explicabo perferendis nostrum, maxime impedit atque odit
+            sunt pariatur illo obcaecati soluta molestias iure facere dolorum
+            adipisci eum? saepe, itaque.
+          </p>
+        </div>
+      </div>
+      <div class="tab w-full overflow-hidden border-t">
+        <input
+          class="absolute opacity-0"
+          id="tab-multi-three"
+          type="checkbox"
+          name="tabs"
+        />
+        <label
+          class="block p-5 leading-normal cursor-pointer"
+          for="tab-multi-three"
+          >label three</label
+        >
+        <div
+          class="tab-content overflow-hidden border-l-2 bg-gray-100 border-indigo-500 leading-normal"
+        >
+          <p class="p-5">
+            lorem ipsum dolor sit amet, consectetur adipisicing elit. tenetur,
+            architecto, explicabo perferendis nostrum, maxime impedit atque odit
+            sunt pariatur illo obcaecati soluta molestias iure facere dolorum
+            adipisci eum? saepe, itaque.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="w-full md:w-3/5 mx-auto p-8">
+    <p>open <strong>one</strong></p>
+    <div class="shadow-md">
+      <div class="tab w-full overflow-hidden border-t">
+        <input
+          class="absolute opacity-0"
+          id="tab-single-one"
+          type="radio"
+          name="tabs2"
+        />
+        <label
+          class="block p-5 leading-normal cursor-pointer"
+          for="tab-single-one"
+          >label one</label
+        >
+        <div
+          class="tab-content overflow-hidden border-l-2 bg-gray-100 border-indigo-500 leading-normal"
+        >
+          <p class="p-5">
+            lorem ipsum dolor sit amet, consectetur adipisicing elit. tenetur,
+            architecto, explicabo perferendis nostrum, maxime impedit atque odit
+            sunt pariatur illo obcaecati soluta molestias iure facere dolorum
+            adipisci eum? saepe, itaque.
+          </p>
+        </div>
+      </div>
+      <div class="tab w-full overflow-hidden border-t">
+        <input
+          class="absolute opacity-0"
+          id="tab-single-two"
+          type="radio"
+          name="tabs2"
+        />
+        <label
+          class="block p-5 leading-normal cursor-pointer"
+          for="tab-single-two"
+          >label two</label
+        >
+        <div
+          class="tab-content overflow-hidden border-l-2 bg-gray-100 border-indigo-500 leading-normal"
+        >
+          <p class="p-5">
+            lorem ipsum dolor sit amet, consectetur adipisicing elit. tenetur,
+            architecto, explicabo perferendis nostrum, maxime impedit atque odit
+            sunt pariatur illo obcaecati soluta molestias iure facere dolorum
+            adipisci eum? saepe, itaque.
+          </p>
+        </div>
+      </div>
+      <div class="tab w-full overflow-hidden border-t">
+        <input
+          class="absolute opacity-0"
+          id="tab-single-three"
+          type="radio"
+          name="tabs2"
+        />
+        <label
+          class="block p-5 leading-normal cursor-pointer"
+          for="tab-single-three"
+          >label three</label
+        >
+        <div
+          class="tab-content overflow-hidden border-l-2 bg-gray-100 border-indigo-500 leading-normal"
+        >
+          <p class="p-5">
+            lorem ipsum dolor sit amet, consectetur adipisicing elit. tenetur,
+            architecto, explicabo perferendis nostrum, maxime impedit atque odit
+            sunt pariatur illo obcaecati soluta molestias iure facere dolorum
+            adipisci eum? saepe, itaque.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    /* optional javascript to close the radio button version by clicking it again */
+    var myradios = document.getelementsbyname("tabs2");
+    var setcheck;
+    var x = 0;
+    for (x = 0; x < myradios.length; x++) {
+      myradios[x].onclick = function () {
+        if (setcheck != this) {
+          setcheck = this;
+        } else {
+          this.checked = false;
+          setCheck = null;
+        }
+      };
+    }
+  </script>
+</main>
+{% endblock %}

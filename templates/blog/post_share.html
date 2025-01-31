@@ -1,0 +1,27 @@
+{% extends '_base.html' %}
+{% load tailwind_filters %}
+
+{% block title %}Share a post{% endblock %}
+
+{% block content %}
+<div class="w-full max-w-xl mx-auto sm:px-6 lg:px-8">
+  {% if sent %}
+    <h1 class="text-4xl font-bold mb-8">E-mail successfully sent</h1>
+    <p class="text-4xl font-bold mb-8">
+      "{{ post.title }}" was successfully sent
+      to {{ form.cleaned_data.to }}.
+    </p>
+  {% else %}
+    <h1 class="text-4xl font-bold mb-8">Share "{{ post.title }}" by e-mail</h1>
+    <form method="post">
+      {{ form|crispy }}
+      {% csrf_token %}
+      <input type="submit" value="Send e-mail">
+        <button class="text-white bg-blue-700 hover:bg-blue-800
+          focus:ring-4 focus:ring-blue-300 font-medium rounded-lg
+          text-sm px-5 py-2.5 me-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700
+          focus:outline-none dark:focus:ring-blue-800">Submit</button>
+    </form>
+  {% endif %}
+</div>
+{% endblock %}
