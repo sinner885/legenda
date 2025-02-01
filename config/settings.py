@@ -3,7 +3,7 @@ import environ
 
 # Установка переменных окружения
 env = environ.Env()
-environ.Env.read_env(env.str("ENV_PATH", ".env"))
+environ.Env.read_env(env.str("ENV_PATH", default=".env"))
 
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -102,4 +102,3 @@ TAILWIND_APP_NAME = "theme"
 INTERNAL_IPS = [
     "127.0.0.1",
 ]
-
