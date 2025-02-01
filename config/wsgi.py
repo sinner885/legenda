@@ -17,7 +17,7 @@ env.read_env()
 
 # os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'infopogreb.settings')
 os.environ.setdefault(
-    "DJANGO_SETTINGS_MODULE", env.str("DJANGO_SETTINGS_MODULE", "config.setting")
+    "DJANGO_SETTINGS_MODULE", env.str("DJANGO_SETTINGS_MODULE", "config.settings")
 )
 
 application = get_wsgi_application()
