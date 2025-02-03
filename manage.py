@@ -6,7 +6,8 @@ import sys
 from environ import Env
 
 env = Env()
-env.read_env()
+env_path = env.str('ENV_PATH', '.env')
+env.read_env(env_path)
 
 
 def main():
