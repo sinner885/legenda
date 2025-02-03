@@ -9,3 +9,4 @@ db.sqlite3
 .venv_l
 
 media
+/staticfiles/
